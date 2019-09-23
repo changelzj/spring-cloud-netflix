@@ -2,9 +2,30 @@
 
 * fengn默认使用ribbon，采用轮询策略的负载均衡
 * feign自带熔断器，但是默认关闭，需要在配置中打开 feign.hystrix.enabled=true
-* feign异常处理类的声明：
+* feign异常处理工厂类的声明：
    public class UserClientFallbackFactory implements FallbackFactory<UserClient> {...}
 
+## Ribbon 负载均衡
+
+* ribbon和eureka整合，可以直接通过服务名调用服务  
+
+* ribbon在工作时分两步，首先选择eureka server，优先选择负载小的那一台，然后根据用户指定的策略，在某一台选择一个访问地址。  
+
+* 不指定策略就默认是Round轮询  
+
+几种负载均衡策略：
+
+        Round：轮询
+        Random：随机
+        AvailabilityFilteringRule： 会先过滤掉多次访问失败而处于断路器跳闸状态的服务还有并发连接数量超过阈值的服务，
+        对剩余的服务进行轮询访问
+        WeightedResponceTimeRule：根据平均响应时间计算出所有服务的权重，响应时间越快，则权重越大，选中几率越高
+        刚启动时如果统计信息不足，则使用轮询策略，等统计信息足够，在切换到这个策略
+        RetryRule: 先按照轮询策略获取服务，如果获取失败会在指定时间内重试，获取可用的服务。
+        BestAvailableRule: 会先过滤掉多次访问失败而处于断路器跳闸状态的服务,在选择并发量最少的一台
+        ZoneAvoidanceRule: 默认规则，符合判断服务器所在区域的性能和server可用性选择服务器
+        
+        
 ## Hystrix 熔断器
 
 用于处理分布式系统的延迟和容错的开源库
