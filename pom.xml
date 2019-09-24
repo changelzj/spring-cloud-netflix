@@ -10,16 +10,13 @@
     
     <modules>
         <module>spring-cloud-netflix-dto</module>
-        
         <module>spring-cloud-netflix-config</module>
         <module>spring-cloud-netflix-zuul</module>
         <module>spring-cloud-netflix-eureka</module>
         <module>spring-cloud-netflix-hystrix-dashboard</module>
-        
         <module>spring-cloud-netflix-feign-consumer</module>
         <module>spring-cloud-netflix-ribbon-consumer</module>
         <module>spring-cloud-netflix-provider</module>
-        
     </modules>
 
     <parent>
@@ -36,6 +33,12 @@
                 <version>Greenwich.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>spring-cloud-netflix-dto</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
