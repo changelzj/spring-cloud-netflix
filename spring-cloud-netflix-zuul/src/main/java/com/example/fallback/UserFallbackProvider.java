@@ -25,7 +25,7 @@ public class UserFallbackProvider implements FallbackProvider {
     @Override
     public String getRoute() {
         // 为哪一个服务创建失败路由
-        return "user-provider";
+        return "feign-provider";
     }
 
     @Override

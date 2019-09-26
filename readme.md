@@ -54,3 +54,14 @@
 3.Zuul默认和Ribbon结合实现了负载均衡
 基本访问格式：网关+服务+API: http://host:port/{service-name}/api/api
 
+## ZipKin链路追踪
+
+ZipKin，开源的跟踪系统，Twitter公司开源，收集服务的定时数据，以解决服务的延迟问题，包括数据手机存储查询和展现
+每个服务向ZipKin报告定时数据，ZipKin会根据调用关系生成依赖关系图
+除了parent pom外，所有服务都要被追踪，包括注册中心Eureka
+
+## Spring-Cloud-Admin 服务监控
+
+
+
+
