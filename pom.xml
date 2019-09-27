@@ -18,6 +18,7 @@
         <module>spring-cloud-netflix-ribbon-consumer</module>
         <module>spring-cloud-netflix-provider</module>
         <module>spring-cloud-netflix-zipkin</module>
+        <module>spring-cloud-netflix-admin</module>
     </modules>
 
     <parent>
@@ -57,6 +58,17 @@
                 <artifactId>zipkin-autoconfigure-ui</artifactId>
                 <version>2.10.1</version>
             </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
