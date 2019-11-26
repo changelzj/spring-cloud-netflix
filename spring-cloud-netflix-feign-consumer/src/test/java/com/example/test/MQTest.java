@@ -1,6 +1,6 @@
 package com.example.test;
 
-import com.example.ProviderApplication;
+import com.example.FeignApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.amqp.core.AmqpTemplate;
@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
 
-@SpringBootTest(classes = ProviderApplication.class)
+@SpringBootTest(classes = FeignApplication.class)
 @RunWith(SpringRunner.class)
 public class MQTest {
     @Autowired
