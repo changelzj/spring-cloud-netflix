@@ -14,4 +14,10 @@ public interface StreamClient {
     
     @Output("out")
     MessageChannel output();
+
+    @Input("inputback")
+    SubscribableChannel inputback();
+
+    @Output("outputback")
+    MessageChannel outputback();
 }
