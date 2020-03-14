@@ -15,10 +15,9 @@
         <module>spring-cloud-netflix-eureka</module>
         <module>spring-cloud-netflix-hystrix-dashboard</module>
         <module>spring-cloud-netflix-feign-consumer</module>
-        <module>spring-cloud-netflix-ribbon-consumer</module>
+        <module>spring-cloud-netflix-consumer</module>
         <module>spring-cloud-netflix-provider</module>
         <module>spring-cloud-netflix-zipkin</module>
-        <module>spring-cloud-netflix-admin</module>
     </modules>
 
     <parent>
